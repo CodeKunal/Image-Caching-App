@@ -10,36 +10,34 @@ import UIKit
 
 class FolowersTableViewController: UIViewController {
     var user: User!
-    @IBOutlet weak var userTableView: UICollectionView!
+    
+    @IBOutlet weak var followersCollectionView: UICollectionView!
+    
+//    @IBOutlet weak var followerCollectionView: UICollectionView!
     var followersViewModel: FollowersViewModel!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         followersViewModel = FollowersViewModel()
         followersViewModel.fetchFollowersDelegate = self
         
-        userTableView.register(UINib(nibName: "FollowersCellCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "follower")
+        followersCollectionView.register(UINib(nibName: "FollowersCellCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "follower")
         
         
         followersViewModel.fetchFollowers(urlString: user.followersUrl)
-
+        
     }
     
-
+    
 }
 
 extension FolowersTableViewController:UICollectionViewDelegate, UICollectionViewDataSource{
-//    func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        return 2
-//    }
     
-    //2
     func collectionView(_ collectionView: UICollectionView,
-                                 numberOfItemsInSection section: Int) -> Int {
+                        numberOfItemsInSection section: Int) -> Int {
         return followersViewModel.getCellItemsCount()
     }
     
-    //3
     func collectionView(
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath
@@ -47,23 +45,21 @@ extension FolowersTableViewController:UICollectionViewDelegate, UICollectionView
         let follower = followersViewModel.getCellItem(index: indexPath.row)
         let cell = collectionView
             .dequeueReusableCell(withReuseIdentifier: "follower", for: indexPath) as! FollowersCellCollectionViewCell
-            cell.updateCell(follower: follower)
-        // Configure the cell
+        cell.updateCell(follower: follower)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // handle tap events
-        print("You selected cell #\(indexPath.item)!")
+        
     }
-
+    
 }
 
 extension FolowersTableViewController: FetchFollowersDelegate {
     
     
     func fetchFollowersSucceeded(_ usersViewModel: FollowersViewModel) {
-        userTableView.reloadData()
+        followersCollectionView.reloadData()
     }
     
     func fetchFollowersFailed(_ usersViewModel: FollowersViewModel, error: Error) {

@@ -24,24 +24,11 @@ class UsersTableViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-    func redirectToUserDetailsScreen(user: User) {
-        let folowersTableViewController = FolowersTableViewController()
+    func redirect(user: User) {
+        let folowersTableViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "followersCV") as! FolowersTableViewController
         folowersTableViewController.user = user
         navigationController?.pushViewController(folowersTableViewController, animated: true)
     }
-
-
 }
 extension UsersTableViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,14 +38,13 @@ extension UsersTableViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellUser = usersViewModel.getCellItem(index: indexPath.row)
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell", for: indexPath) as! UserTableViewCell
-//        cell.userSummaryCellDelegate = self
         cell.updateCell(user: cellUser)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cellUser = usersViewModel.getCellItem(index: indexPath.row)
-        redirectToUserDetailsScreen(user: cellUser)
+        redirect(user: cellUser)
     }
 }
 

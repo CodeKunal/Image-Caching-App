@@ -10,20 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bounce" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
         <!--Users Table View Controller-->
         <scene sceneID="ty5-Zx-SuQ">
             <objects>
@@ -59,10 +45,10 @@
             </objects>
             <point key="canvasLocation" x="2186.9565217391305" y="43.526785714285715"/>
         </scene>
-        <!--Folowers Table View Controller-->
+        <!--followersCV-->
         <scene sceneID="35M-in-OrU">
             <objects>
-                <viewController id="t4y-Zc-0hG" customClass="FolowersTableViewController" customModule="Bounce" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="followersCV" title="followersCV" id="t4y-Zc-0hG" customClass="FolowersTableViewController" customModule="Bounce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Qk-CA-JGk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,24 +62,37 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="BjN-S1-hSX">
+                                        <rect key="frame" x="0.0" y="0.0" width="191" height="228"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="191" height="228"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
                                 <connections>
-                                    <outlet property="dataSource" destination="t4y-Zc-0hG" id="bjq-v7-ZAb"/>
-                                    <outlet property="delegate" destination="t4y-Zc-0hG" id="BZd-CC-urr"/>
+                                    <outlet property="dataSource" destination="t4y-Zc-0hG" id="3M9-fp-z4X"/>
+                                    <outlet property="delegate" destination="t4y-Zc-0hG" id="PTF-jj-JWH"/>
                                 </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ijz-h1-tYJ" firstAttribute="top" secondItem="OUJ-08-tcU" secondAttribute="top" id="Esd-5s-h46"/>
+                            <constraint firstItem="ijz-h1-tYJ" firstAttribute="leading" secondItem="OUJ-08-tcU" secondAttribute="trailing" constant="-414" id="Lr6-Rh-9zF"/>
+                            <constraint firstItem="ijz-h1-tYJ" firstAttribute="top" secondItem="OUJ-08-tcU" secondAttribute="bottom" constant="-818" id="Sao-MZ-BN6"/>
+                            <constraint firstItem="ijz-h1-tYJ" firstAttribute="leading" secondItem="OUJ-08-tcU" secondAttribute="trailing" constant="-414" id="cGk-QH-2sP"/>
                             <constraint firstItem="OUJ-08-tcU" firstAttribute="trailing" secondItem="ijz-h1-tYJ" secondAttribute="trailing" id="dYV-He-MmI"/>
                             <constraint firstItem="OUJ-08-tcU" firstAttribute="bottom" secondItem="ijz-h1-tYJ" secondAttribute="bottom" id="fdy-Ju-LC1"/>
                             <constraint firstItem="ijz-h1-tYJ" firstAttribute="leading" secondItem="OUJ-08-tcU" secondAttribute="leading" id="hxl-Y8-QGI"/>
+                            <constraint firstItem="ijz-h1-tYJ" firstAttribute="top" secondItem="OUJ-08-tcU" secondAttribute="bottom" constant="-818" id="iRS-cg-dwe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OUJ-08-tcU"/>
                     </view>
                     <connections>
-                        <outlet property="userTableView" destination="ijz-h1-tYJ" id="033-JX-XbZ"/>
+                        <outlet property="followersCollectionView" destination="ijz-h1-tYJ" id="WNL-gs-JrI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r44-9C-Zch" userLabel="First Responder" sceneMemberID="firstResponder"/>

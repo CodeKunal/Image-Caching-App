@@ -8,26 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		966E537322F047040034A2BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966E537222F047040034A2BB /* AppDelegate.swift */; };
-		966E537522F047040034A2BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966E537422F047040034A2BB /* ViewController.swift */; };
 		966E537822F047040034A2BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 966E537622F047040034A2BB /* Main.storyboard */; };
 		966E537A22F047050034A2BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 966E537922F047050034A2BB /* Assets.xcassets */; };
 		966E537D22F047050034A2BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 966E537B22F047050034A2BB /* LaunchScreen.storyboard */; };
 		966E538522F0483E0034A2BB /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966E538422F0483E0034A2BB /* UsersTableViewController.swift */; };
 		966E538722F048550034A2BB /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966E538622F048550034A2BB /* UsersViewModel.swift */; };
 		966E538922F048690034A2BB /* FollowersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966E538822F048690034A2BB /* FollowersViewModel.swift */; };
-		966E538B22F048970034A2BB /* FolowersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966E538A22F048970034A2BB /* FolowersTableViewController.swift */; };
 		966E538E22F049200034A2BB /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 966E538C22F049200034A2BB /* UserTableViewCell.xib */; };
 		966E538F22F049200034A2BB /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966E538D22F049200034A2BB /* UserTableViewCell.swift */; };
 		966E539122F04ABF0034A2BB /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966E539022F04ABF0034A2BB /* UserModel.swift */; };
 		966E539322F04ACD0034A2BB /* FollowerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966E539222F04ACD0034A2BB /* FollowerModel.swift */; };
 		966E539622F04EA50034A2BB /* FollowersCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 966E539422F04EA50034A2BB /* FollowersCellCollectionViewCell.xib */; };
 		966E539722F04EA50034A2BB /* FollowersCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966E539522F04EA50034A2BB /* FollowersCellCollectionViewCell.swift */; };
+		966E539D22F08A410034A2BB /* FolowersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966E539C22F08A410034A2BB /* FolowersTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		966E536F22F047040034A2BB /* Bounce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bounce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		966E537222F047040034A2BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		966E537422F047040034A2BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		966E537722F047040034A2BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		966E537922F047050034A2BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		966E537C22F047050034A2BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,13 +33,13 @@
 		966E538422F0483E0034A2BB /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
 		966E538622F048550034A2BB /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 		966E538822F048690034A2BB /* FollowersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersViewModel.swift; sourceTree = "<group>"; };
-		966E538A22F048970034A2BB /* FolowersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolowersTableViewController.swift; sourceTree = "<group>"; };
 		966E538C22F049200034A2BB /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		966E538D22F049200034A2BB /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		966E539022F04ABF0034A2BB /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		966E539222F04ACD0034A2BB /* FollowerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerModel.swift; sourceTree = "<group>"; };
 		966E539422F04EA50034A2BB /* FollowersCellCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowersCellCollectionViewCell.xib; sourceTree = "<group>"; };
 		966E539522F04EA50034A2BB /* FollowersCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		966E539C22F08A410034A2BB /* FolowersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolowersTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,15 +73,14 @@
 			isa = PBXGroup;
 			children = (
 				966E537222F047040034A2BB /* AppDelegate.swift */,
-				966E537422F047040034A2BB /* ViewController.swift */,
 				966E537622F047040034A2BB /* Main.storyboard */,
 				966E537922F047050034A2BB /* Assets.xcassets */,
 				966E537B22F047050034A2BB /* LaunchScreen.storyboard */,
 				966E537E22F047050034A2BB /* Info.plist */,
+				966E539C22F08A410034A2BB /* FolowersTableViewController.swift */,
 				966E538422F0483E0034A2BB /* UsersTableViewController.swift */,
 				966E538622F048550034A2BB /* UsersViewModel.swift */,
 				966E538822F048690034A2BB /* FollowersViewModel.swift */,
-				966E538A22F048970034A2BB /* FolowersTableViewController.swift */,
 				966E538C22F049200034A2BB /* UserTableViewCell.xib */,
 				966E538D22F049200034A2BB /* UserTableViewCell.swift */,
 				966E539022F04ABF0034A2BB /* UserModel.swift */,
@@ -167,13 +164,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				966E538B22F048970034A2BB /* FolowersTableViewController.swift in Sources */,
-				966E537522F047040034A2BB /* ViewController.swift in Sources */,
 				966E539722F04EA50034A2BB /* FollowersCellCollectionViewCell.swift in Sources */,
 				966E539122F04ABF0034A2BB /* UserModel.swift in Sources */,
 				966E538F22F049200034A2BB /* UserTableViewCell.swift in Sources */,
 				966E538722F048550034A2BB /* UsersViewModel.swift in Sources */,
 				966E539322F04ACD0034A2BB /* FollowerModel.swift in Sources */,
+				966E539D22F08A410034A2BB /* FolowersTableViewController.swift in Sources */,
 				966E537322F047040034A2BB /* AppDelegate.swift in Sources */,
 				966E538522F0483E0034A2BB /* UsersTableViewController.swift in Sources */,
 				966E538922F048690034A2BB /* FollowersViewModel.swift in Sources */,

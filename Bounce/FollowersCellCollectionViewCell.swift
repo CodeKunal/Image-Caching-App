@@ -19,9 +19,7 @@ class FollowersCellCollectionViewCell: UICollectionViewCell {
     
     func updateCell(follower:Follower){
         let url = URL(string: follower.avatarUrl)
-        let imageData = try? Data(contentsOf: url!)
-        let image = UIImage(data: imageData!)
-        imageView.image = image
+        imageView.load(url: url!)
         name.text = follower.name
     }
 
