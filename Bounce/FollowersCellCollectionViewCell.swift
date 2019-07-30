@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class FollowersCellCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var name: UILabel!
@@ -19,7 +20,7 @@ class FollowersCellCollectionViewCell: UICollectionViewCell {
     
     func updateCell(follower:Follower){
         let url = URL(string: follower.avatarUrl)
-        imageView.load(url: url!)
+        imageView.kf.setImage(with: url)
         name.text = follower.name
     }
 

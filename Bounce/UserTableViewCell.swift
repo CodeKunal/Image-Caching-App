@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class UserTableViewCell: UITableViewCell {
 
@@ -19,7 +20,7 @@ class UserTableViewCell: UITableViewCell {
     
     func updateCell(user:User){
         let url = URL(string: user.avatarUrl)
-        userImageView.load(url: url!)
+        userImageView.kf.setImage(with: url)
         userName.text = user.name
     }
 
@@ -31,16 +32,3 @@ class UserTableViewCell: UITableViewCell {
     
 }
 
-extension UIImageView {
-    func load(url: URL) {
-        DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: url) {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self?.image = image
-                    }
-                }
-            }
-        }
-    }
-}

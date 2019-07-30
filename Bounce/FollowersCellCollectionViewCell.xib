@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="237" height="204"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oma-lO-pib">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oma-lO-pib" customClass="Kin">
                         <rect key="frame" x="68.5" y="12" width="100" height="100"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="100" id="5AR-rh-et6"/>

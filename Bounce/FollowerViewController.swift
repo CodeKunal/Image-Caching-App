@@ -7,21 +7,18 @@
 //
 
 import UIKit
+import Kingfisher
 
 class FollowerViewController: UIViewController {
-
+    
     @IBOutlet weak var followerImageView: UIImageView!
     var follower: Follower!
-    var image: UIImage?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = follower.name
-        if let image = image{
-            followerImageView.image = image
-        }else{
-            let url = URL(string: follower.avatarUrl)
-            followerImageView.load(url: url!)
-        }
+        let url = URL(string: follower.avatarUrl)
+        followerImageView.kf.setImage(with: url)
         followerImageView.backgroundColor = UIColor.blue
         animateImageView()
         // Do any additional setup after loading the view.
@@ -36,15 +33,15 @@ class FollowerViewController: UIViewController {
             })
         })
     }
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
