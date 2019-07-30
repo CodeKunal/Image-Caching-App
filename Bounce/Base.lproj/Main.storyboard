@@ -45,10 +45,10 @@
             </objects>
             <point key="canvasLocation" x="2186.9565217391305" y="43.526785714285715"/>
         </scene>
-        <!--followersCV-->
+        <!--Folowers Table View Controller-->
         <scene sceneID="35M-in-OrU">
             <objects>
-                <viewController storyboardIdentifier="followersCV" title="followersCV" id="t4y-Zc-0hG" customClass="FolowersTableViewController" customModule="Bounce" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="followersCV" id="t4y-Zc-0hG" customClass="FolowersTableViewController" customModule="Bounce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Qk-CA-JGk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,6 +98,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r44-9C-Zch" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2821.739130434783" y="35.491071428571423"/>
+        </scene>
+        <!--Follower View Controller-->
+        <scene sceneID="LU2-94-pOR">
+            <objects>
+                <viewController storyboardIdentifier="followerVC" id="ma7-nI-JuJ" customClass="FollowerViewController" customModule="Bounce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DQM-8G-0Fh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Lm-KJ-sAq">
+                                <rect key="frame" x="147" y="393" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="R2M-0V-7kq"/>
+                                    <constraint firstAttribute="height" constant="120" id="y6I-y7-cOM"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1Lm-KJ-sAq" firstAttribute="centerX" secondItem="PCz-qZ-UWk" secondAttribute="centerX" id="GLz-nY-Ez3"/>
+                            <constraint firstItem="1Lm-KJ-sAq" firstAttribute="centerY" secondItem="PCz-qZ-UWk" secondAttribute="centerY" id="IA5-Jo-wbP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PCz-qZ-UWk"/>
+                    </view>
+                    <connections>
+                        <outlet property="followerImageView" destination="1Lm-KJ-sAq" id="lED-rv-oOM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GgB-ZB-TWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3814" y="35"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NwS-Sd-a5o">

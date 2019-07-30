@@ -49,8 +49,22 @@ extension FolowersTableViewController:UICollectionViewDelegate, UICollectionView
         return cell
     }
     
+    func redirect(follower: Follower, image: UIImage?) {
+        let followerViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "followerVC") as! FollowerViewController
+        followerViewController.follower = follower
+        followerViewController.image = image
+        navigationController?.pushViewController(followerViewController, animated: true)
+    }
+
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell: FollowersCellCollectionViewCell = collectionView.cellForItem(at: indexPath) as! FollowersCellCollectionViewCell
+        let image = cell.imageView.image
         
+        let cellFollower = followersViewModel.getCellItem(index: indexPath.row)
+
+        redirect(follower: cellFollower, image: image)
+
     }
     
 }
